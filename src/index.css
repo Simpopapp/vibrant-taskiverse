@@ -4,48 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 252 87% 74%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -63,6 +31,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
   }
 }
 
@@ -72,6 +42,38 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground bg-mystic-pattern bg-repeat;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .task-card {
+    @apply relative bg-card p-4 rounded-lg border border-border/50 hover:border-primary/50 transition-colors
+           backdrop-blur-sm bg-opacity-80 animate-fade-in;
+  }
+
+  .achievement-badge {
+    @apply relative flex items-center justify-center w-16 h-16 rounded-full
+           bg-achievement-bg bg-cover bg-center animate-levitate;
+  }
+
+  .note-container {
+    @apply bg-note-texture bg-cover bg-center p-6 rounded-lg shadow-lg
+           backdrop-blur-sm bg-opacity-90;
+  }
+
+  .mystic-button {
+    @apply px-4 py-2 rounded-md bg-primary/20 hover:bg-primary/30 
+           border border-primary/50 transition-all duration-200
+           hover:scale-105 active:scale-95;
+  }
+
+  .header-section {
+    @apply relative py-6 bg-header-decoration bg-contain bg-no-repeat bg-top;
+  }
+
+  .footer-section {
+    @apply relative py-4 bg-footer-decoration bg-contain bg-no-repeat bg-bottom;
   }
 }
