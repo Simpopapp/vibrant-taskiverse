@@ -52,18 +52,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        mystic: {
-          100: "#E5DEFF",
-          200: "#9b87f5",
-          300: "#7E69AB",
-          400: "#6E59A5",
-          500: "#1A1F2C",
-        }
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'parchment': "url('/images/parchment.png')",
+        'dragon-scale': "url('/images/dragon-scale.png')",
+        'mystic-pattern': "url('/images/mystical-glow.png')",
+        'achievement-bg': "url('/images/gold-emboss.png')",
+        'task-texture': "url('/images/wood-panel.png')",
+        'note-texture': "url('/images/parchment.png')",
+        'header-decoration': "url('/images/dragon-scale.png')",
+        'footer-decoration': "url('/images/stone-wall.png')",
       },
       keyframes: {
         "accordion-down": {
@@ -99,16 +102,6 @@ export default {
         "scale-in": "scale-in 0.2s ease-out",
         "levitate": "levitate 3s ease-in-out infinite"
       },
-      backgroundImage: {
-        'parchment': "url('/images/parchment.png')",
-        'dragon-scale': "url('/images/dragon-scale.png')",
-        'mystic-pattern': "url('/images/mystic-pattern.png')",
-        'achievement-bg': "url('/images/achievement-bg.png')",
-        'task-texture': "url('/images/task-texture.png')",
-        'note-texture': "url('/images/note-texture.png')",
-        'header-decoration': "url('/images/header-decoration.png')",
-        'footer-decoration': "url('/images/footer-decoration.png')",
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],
