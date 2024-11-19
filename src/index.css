@@ -42,28 +42,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground min-h-screen;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background: url('/images/mystical-glow.png') center/cover fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/mystical-glow.png') center/cover fixed no-repeat;
   }
 }
 
 @layer components {
   .task-card {
     @apply relative p-4 rounded-lg border border-border/50 hover:border-primary/50 transition-colors
-           backdrop-blur-sm bg-opacity-80 animate-fade-in;
-    background: url('/images/wood-panel.png') center/cover no-repeat;
+           backdrop-blur-sm bg-opacity-80;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/wood-panel.png') center/cover no-repeat;
   }
 
   .achievement-badge {
     @apply relative flex items-center justify-center w-16 h-16 rounded-full
            animate-levitate;
-    background: url('/images/gold-emboss.png') center/cover no-repeat;
+    background: linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.2)), url('/images/gold-emboss.png') center/cover no-repeat;
   }
 
   .note-container {
-    @apply p-6 rounded-lg shadow-lg backdrop-blur-sm bg-opacity-90;
-    background: url('/images/parchment.png') center/cover no-repeat;
+    @apply p-6 rounded-lg shadow-lg backdrop-blur-sm;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/images/parchment.png') center/cover no-repeat;
   }
 
   .mystic-button {
@@ -73,12 +73,12 @@
   }
 
   .header-section {
-    @apply relative py-6;
-    background: url('/images/dragon-scale.png') top/contain no-repeat;
+    @apply relative py-6 mb-8;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/dragon-scale.png') top/contain repeat-x;
   }
 
   .footer-section {
-    @apply relative py-4;
-    background: url('/images/stone-wall.png') bottom/contain no-repeat;
+    @apply relative py-4 mt-8;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/stone-wall.png') bottom/contain repeat-x;
   }
 }
